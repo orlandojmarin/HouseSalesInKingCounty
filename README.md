@@ -67,4 +67,7 @@ Explore the code for detailed visualizations:
 This project highlights the role of machine learning in real estate analytics.  
 By applying both linear and non-linear models, we gained valuable insights into the factors driving home prices and demonstrated how different modeling techniques capture complex patterns in the data.
 
+## Contributor
+- Orlando Marin
+
 ---
