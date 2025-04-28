@@ -1,5 +1,3 @@
-# HouseSalesInKingCounty
-
 # House Sales in King County, USA: Housing Price Prediction
 
 ## Overview
