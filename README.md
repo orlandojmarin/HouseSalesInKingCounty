@@ -8,6 +8,7 @@ The goal is to identify key factors that impact home values and create accurate 
 - Predict housing prices based on property features and location.
 - Identify the most important features influencing house prices.
 - Compare the performance of linear and non-linear machine learning models.
+- Improve reliability through cross-validation.
 
 ## Technologies
 Python for data analysis, feature engineering, and modeling.
@@ -16,7 +17,7 @@ Key libraries:
 - pandas: Data cleaning and manipulation
 - numpy: Numerical computations
 - matplotlib and seaborn: Data visualization
-- scikit-learn: Machine learning (Lasso Regression, KNN Regressor)
+- scikit-learn: Machine learning (Lasso Regression, KNN Regressor, Random Forest)
 - folium: Interactive mapping (property locations)
 
 ## Dataset
@@ -37,6 +38,7 @@ Feature Engineering:
 - **Results**:
   - R² Score: 0.7011
   - Root Mean Squared Error (RMSE): \$112,313
+  - Cross-Validation Mean R²: 0.6985
 - **Feature Insights**:
   - Top predictors included `grade`, `sqft_living`, and `latitude`.
 
@@ -45,11 +47,21 @@ Feature Engineering:
 - **Results**:
   - R² Score: 0.7721
   - Root Mean Squared Error (RMSE): \$98,078
+  - Cross-Validation Mean R²: 0.7678
 - **Performance**:
   - Outperformed Lasso by better explaining variance and reducing prediction error.
 
+### Random Forest Regression
+- **Purpose**: Tree-based ensemble model to handle non-linear relationships and feature interactions.
+- **Results**:
+  - R² Score: 0.8667
+  - Root Mean Squared Error (RMSE): \$74,995
+  - Cross-Validation Mean R²: 0.8672
+- **Feature Insights**:
+  - Most important features: `latitude`, `sqft_living`, `grade`, and `longitude`.
+
 ## Results
-- **Best Model**: KNN Regression
+- **Best Model**: Random Forest Regressor
 - **Key Observations**:
   - Homes with better `view`, higher `grade`, and waterfront access are priced higher.
   - Square footage (`sqft_living`) has a strong positive relationship with price.
@@ -61,11 +73,11 @@ Explore the code for detailed visualizations:
 - Seasonal trends in home sales
 - Folium maps of the most and least expensive homes
 - Scatter plots and bar charts for feature relationships
-- Residual plots for model evaluation
+- Residual plots and feature importance charts for model evaluation
 
 ## Conclusion
 This project highlights the role of machine learning in real estate analytics.  
-By applying both linear and non-linear models, we gained valuable insights into the factors driving home prices and demonstrated how different modeling techniques capture complex patterns in the data.
+By applying linear, non-linear, and tree-based models (and validating them with cross-validation) we gained valuable insights into the drivers of housing prices and demonstrated the strengths of different modeling techniques.
 
 ## Contributor
 - Orlando Marin
